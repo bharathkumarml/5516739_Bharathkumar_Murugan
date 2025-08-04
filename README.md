@@ -7,4 +7,4 @@
 [![GIT Certificate](GIT_simplilearn/image.png)]
 
 ## 📝 Essential of C Programming
-[![sololearn-introduction-to-C](Essentials of C Programming/sololearn-introduction-to-C/sololearn-introduction-to-c.jpg)]
+![sololearn-introduction-to-C](Essentials_of_C_Programming/sololearn-introduction-to-C/sololearn-introduction-to-c.jpg)
