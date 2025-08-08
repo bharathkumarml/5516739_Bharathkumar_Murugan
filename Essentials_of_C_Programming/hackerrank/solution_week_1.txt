@@ -421,3 +421,96 @@ s = input()
 t = input()
 print(strings_xor(s, t))
 
+
+
+
+
+mock test (week  1)
+
+
+QUESTION : 1 :FIND THE MEDIAN
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int compare(const void *a, const void *b){
+    return(*(int*)a - *(int*)b);
+}
+
+int findMedian(int arr[], int n){
+    qsort(arr,n, sizeof(int), compare);
+    return arr[n/2];
+}
+
+int main(){
+    int n;
+    scanf("%d", &n);
+    
+    int arr[n];
+    for (int i = 0; i < n; i++){
+        scanf("%d",&arr[i]);
+    }
+    int median = findMedian(arr, n);
+    printf("%d\n",median);
+    
+    return 0;
+}
+
+
+
+
+
+
+QUESTION : 2 :FLIPPING THE MATRIX
+
+#include <stdio.h>
+
+int max(int a, int b) {
+    return a > b ? a : b;
+}
+
+int flippingMatrix(int n, int matrix[2*n][2*n]) {
+    int sum = 0;
+    int size = 2 * n;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            int a = matrix[i][j];
+            int b = matrix[i][size - j - 1];
+            int c = matrix[size - i - 1][j];
+            int d = matrix[size - i - 1][size - j - 1];
+            sum += max(max(a, b), max(c, d));
+        }
+    }
+
+    return sum;
+}
+
+int main() {
+    int q;
+    scanf("%d", &q);
+    while (q--) {
+        int n;
+        scanf("%d", &n);
+        int matrix[2*n][2*n];
+
+        for (int i = 0; i < 2*n; i++) {
+            for (int j = 0; j < 2*n; j++) {
+                scanf("%d", &matrix[i][j]);
+            }
+        }
+
+        int result = flippingMatrix(n, matrix);
+        printf("%d\n", result);
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+-------------------------------------------------------------------------------------WEEK ONE COMPLETED-------------------------------------------------------------------------------
+
